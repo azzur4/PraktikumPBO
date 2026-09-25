@@ -1,15 +1,11 @@
-# Sistem Data Mahasiswa - Java
-
-## Deskripsi
-
+# Sistem Data Mahasiswa 
 Program ini merupakan program Java sederhana dengan studi kasus **Sistem Data Mahasiswa**. Program dibuat untuk memenuhi ketentuan Lab Session dengan menerapkan konsep dasar pemrograman berorientasi objek (PBO).
 
 Program dapat menerima data mahasiswa berupa nama, NIM, dan nilai. Data tersebut kemudian diproses untuk menampilkan informasi mahasiswa serta menentukan status kelulusan berdasarkan nilai KKM.
 
-## Tujuan
+# Tujuan
 
 Program ini dibuat untuk menerapkan beberapa konsep dasar Java, yaitu:
-
 1. Class dan Object
 2. Constructor
 3. Konstanta (`final`)
@@ -20,31 +16,26 @@ Program ini dibuat untuk menerapkan beberapa konsep dasar Java, yaitu:
 8. Array
 9. Object dan output program
 
-## Struktur Program
+# Struktur Program
 
 Program terdiri dari dua class:
 
-### 1. `Mahasiswa.java`
+## 1. `Mahasiswa.java`
 
 Class `Mahasiswa` digunakan sebagai rancangan atau cetakan object mahasiswa.
-
 Class ini memiliki beberapa atribut:
-
 - `nama` untuk menyimpan nama mahasiswa
 - `nim` untuk menyimpan NIM mahasiswa
 - `nilai` untuk menyimpan nilai mahasiswa
 
 Class `Mahasiswa` juga memiliki constructor dan dua method, yaitu:
-
 - `tampilkanData()` untuk menampilkan data mahasiswa
 - `cekKelulusan()` untuk menentukan status kelulusan mahasiswa
 
-### 2. `Main.java`
+# 2. `Main.java`
 
 Class `Main` merupakan class utama yang digunakan untuk menjalankan program.
-
 Class ini digunakan untuk:
-
 - menerima input dari pengguna menggunakan `Scanner`
 - mengolah data String dan Character
 - membuat object dari class `Mahasiswa`
@@ -77,7 +68,7 @@ Program dimulai
 Input nama, NIM, dan nilai
       ↓
 Pengolahan Character & String
-      ↓
+      
 Membuat object Mahasiswa
       ↓
 Menyimpan object ke dalam Array
