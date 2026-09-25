@@ -57,8 +57,7 @@ Class ini digunakan untuk:
  
 ## Alur Program 
 Alur program secara sederhana adalah: 
-1. ```text
-   Program dimulai
+1. Program dimulai
 2. Input nama, NIM, dan nilai 
 3. Pengolahan Character & String 
 4. Membuat object Mahasiswa 
