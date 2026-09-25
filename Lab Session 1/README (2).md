@@ -57,22 +57,13 @@ Class ini digunakan untuk:
  
 ## Alur Program 
 Alur program secara sederhana adalah: 
- 
-```text 
-Program dimulai 
-      ↓ 
-Input nama, NIM, dan nilai 
-      ↓ 
-Pengolahan Character & String 
-      ↓ 
-Membuat object Mahasiswa 
-      ↓ 
-Menyimpan object ke dalam Array 
-      ↓ 
-Melakukan looping 
-      ↓ 
-Menampilkan data mahasiswa 
-      ↓ 
-Mengecek status kelulusan 
-      ↓ 
-Program selesai buatkan bagian tabelnya dihilangkan tapi dibikin kalimat  aja
+1. ```text
+   Program dimulai
+2. Input nama, NIM, dan nilai 
+3. Pengolahan Character & String 
+4. Membuat object Mahasiswa 
+5. Menyimpan object ke dalam Array 
+6. Melakukan looping 
+7. Menampilkan data mahasiswa 
+8. Mengecek status kelulusan 
+9. Program selesai 
