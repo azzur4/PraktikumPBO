@@ -1,4 +1,4 @@
-# Praktikum-2-PBO
+# PraktikumPBO
 Nama : Kayla Azzura Salim
 NIM : L0325039
 Prodi : Informatika PSDKU
