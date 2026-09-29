@@ -10,7 +10,6 @@ package praktikum04;
  */
 public class Book {
 
-
     private final String judul;
     private final String penulis;
     private final int tahunTerbit;
@@ -63,12 +62,12 @@ public class Book {
 
     public void tampilkanInfo() {
         System.out.println("----------------------------");
-        System.out.println("Judul       : " + judul);
-        System.out.println("Penulis     : " + penulis);
-        System.out.println("Tahun Terbit: " + tahunTerbit);
-        System.out.println("Kategori    : " + kategori);
-        System.out.println("Status      : "
+        System.out.println("Judul        : " + judul);
+        System.out.println("Penulis      : " + penulis);
+        System.out.println("Tahun Terbit : " + tahunTerbit);
+        System.out.println("Kategori     : " + kategori);
+        System.out.println("Status       : "
                 + (statusKetersediaan ? "Tersedia" : "Dipinjam"));
-        System.out.println("Jumlah Dipinjam: " + jumlahDipinjam);
+        System.out.println("Jumlah Dipinjam : " + jumlahDipinjam);
     }
 }

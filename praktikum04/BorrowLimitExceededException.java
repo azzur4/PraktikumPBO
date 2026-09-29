@@ -8,8 +8,9 @@ package praktikum04;
  *
  * @author LOQ
  */
-public class BorrowLimitExceededException {
-
+public class BorrowLimitExceededException extends Exception {
+    
     public BorrowLimitExceededException(String message) {
+        super(message);
     }
 }

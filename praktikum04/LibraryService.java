@@ -30,9 +30,7 @@ public class LibraryService {
         jumlahPinjamKategori = new HashMap<>();
     }
 
-    // =========================
-    // TAMBAH BUKU
-    // =========================
+    // tambah buku
 
     public void tambahBuku(Book book) {
 
@@ -54,9 +52,7 @@ public class LibraryService {
         }
     }
 
-    // =========================
-    // TAMBAH ANGGOTA
-    // =========================
+    // tambah anggota
 
     public void tambahAnggota(Member member) {
 
@@ -69,11 +65,9 @@ public class LibraryService {
         daftarAnggota.add(member);
     }
 
-    // =========================
-    // CARI BUKU
-    // =========================
+    // cari buku
 
-    private Book cariBuku(String judul) throws Exception {
+    private Book cariBuku(String judul) throws BookNotFoundException {
 
         for (Book book : daftarBuku) {
 
@@ -85,15 +79,13 @@ public class LibraryService {
             }
         }
 
-        throw new Exception(
+        throw new BookNotFoundException(
                 "Buku dengan judul \"" + judul
                 + "\" tidak ditemukan."
         );
     }
 
-    // =========================
-    // CARI ANGGOTA
-    // =========================
+    // cari anggota
 
     private Member cariAnggota(String id) {
 
@@ -107,9 +99,7 @@ public class LibraryService {
         return null;
     }
 
-    // =========================
-    // CARI BUKU BERDASARKAN JUDUL
-    // =========================
+    // cari buku berdasarkan judul
 
     public void cariBerdasarkanJudul(String keyword) {
 
@@ -133,9 +123,7 @@ public class LibraryService {
         }
     }
 
-    // =========================
-    // CARI BUKU BERDASARKAN KATEGORI
-    // =========================
+    // cari buku berdasarkan kategori
 
     public void cariBerdasarkanKategori(String kategori) {
 
@@ -159,9 +147,7 @@ public class LibraryService {
         }
     }
 
-    // =========================
-    // MENAMPILKAN SEMUA BUKU
-    // =========================
+    // menampilkan semua buku
 
     public void tampilkanSemuaBuku() {
 
@@ -176,10 +162,7 @@ public class LibraryService {
             book.tampilkanInfo();
         }
     }
-
-    // =========================
-    // MENAMPILKAN SEMUA ANGGOTA
-    // =========================
+    // menampilkan semua anggota
 
     public void tampilkanSemuaAnggota() {
 
@@ -195,9 +178,7 @@ public class LibraryService {
         }
     }
 
-    // =========================
-    // MEMINJAM BUKU
-    // =========================
+    // meminjam buku
 
     public void pinjamBuku(
             String idMember,
@@ -221,7 +202,7 @@ public class LibraryService {
         // Maksimal 3 buku
         if (member.getDaftarPinjaman().size() >= 3) {
 
-            throw new Exception(
+            throw new BorrowLimitExceededException(
                     "Anggota sudah meminjam 3 buku. "
                     + "Tidak dapat meminjam lagi."
             );
@@ -265,9 +246,7 @@ public class LibraryService {
         System.out.println("Buku berhasil dipinjam.");
     }
 
-    // =========================
-    // MENGEMBALIKAN BUKU
-    // =========================
+    // mengembalikan buku
 
     public void kembalikanBuku(
             String idMember,
@@ -307,9 +286,7 @@ public class LibraryService {
         }
     }
 
-    // =========================
-    // ANALISIS KOLEKSI
-    // =========================
+    // analisis koleksi
 
     public void tampilkanAnalisis() {
 

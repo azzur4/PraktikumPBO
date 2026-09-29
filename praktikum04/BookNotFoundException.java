@@ -8,12 +8,9 @@ package praktikum04;
  *
  * @author LOQ
  */
-public class BookNotFoundException {
-
+public class BookNotFoundException extends Exception{
+    
     public BookNotFoundException(String message) {
-    }
-
-    String getMessage() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        super(message);
     }
 }

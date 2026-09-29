@@ -20,8 +20,8 @@ public class Member {
     public Member(String id, String nama) {
         this.id = id;
         this.nama = nama;
-        daftarPinjaman = new ArrayList<>();
-        totalPinjaman = 0;
+        this.daftarPinjaman = new ArrayList<>();
+        this.totalPinjaman = 0;
     }
 
     public String getId() {
@@ -46,10 +46,32 @@ public class Member {
     }
 
     public void kembalikanBuku(Book book) {
-        daftarPinjaman.remove(book);
+        if (daftarPinjaman.remove(book)) {
+            totalPinjaman--;
+        }
     }
 
-    void tampilkanInfo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void tampilkanInfo() {
+        System.out.println("----------------------------");
+        System.out.println("ID Anggota : " + id);
+        System.out.println("Nama       : " + nama);
+        System.out.println("Total Pinjaman : " + totalPinjaman);
+        
+        if (!nama.isEmpty()) {
+            char hurufPertama = nama.charAt(0);
+            System.out.println(
+            "Inisial Nama : "
+            + Character.toUpperCase(hurufPertama)
+    );
+        if (daftarPinjaman.isEmpty()) {
+            System.out.println("Buku Dipinjam : Tidak ada");
+        } else {
+            System.out.println("Buku Dipinjam :");
+
+            for (Book book : daftarPinjaman) {
+                System.out.println("- " + book.getJudul());
+            }
+        }
     }
+}
 }

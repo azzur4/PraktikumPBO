@@ -10,12 +10,11 @@ import java.util.ArrayList;
  *
  * @author LOQ
  */
-class Library {
+public class Library {
 
     ArrayList<Book> daftarBuku = new ArrayList<>();
     ArrayList<Member> daftarAnggota = new ArrayList<>();
 
-    // Constructor
     public Library() {
         daftarBuku = new ArrayList<>();
         daftarAnggota = new ArrayList<>();
@@ -116,25 +115,5 @@ class Library {
         }
 
         System.out.println("Anggota tidak ditemukan.");
-    }
-
-    void tampilkanSemuaBuku() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void tampilkanSemuaAnggota() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void cariBerdasarkanJudul(String judul) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void cariBerdasarkanKategori(String kategori) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void tampilkanAnalisis() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
