@@ -1,50 +1,51 @@
-Program Pengelolaan Nilai Mahasiswa
+### 1. Deskripsi Program
+Program ini dibuat menggunakan Java untuk mengelola data nilai siswa. Pengguna dapat memasukkan jumlah siswa, nama, dan nilai melalui keyboard. Program akan menentukan status kelulusan berdasarkan nilai minimal 70. Data yang dimasukkan akan disimpan ke dalam file laporan_nilai.txt. Setelah itu, program membaca kembali isi file dan menampilkannya di console.
 
-## 1. Deskripsi Program
+### 2. Fitur Program
+1. Memasukkan jumlah siswa.
+2. Memasukkan nama dan nilai setiap siswa.
+3. Menentukan status kelulusan siswa.
+4. Menghitung rata-rata nilai seluruh siswa.
+5. Menghitung jumlah siswa yang lulus dan tidak lulus.
+6. Menyimpan data ke file laporan_nilai.txt.
+7. Membaca kembali isi file dan menampilkannya di console.
 
-Program Pengelolaan Nilai Mahasiswa merupakan aplikasi berbasis Java yang digunakan untuk menginput, mengelola, dan menampilkan data nilai mahasiswa melalui konsol. Program ini menerapkan konsep Object-Oriented Programming (OOP) serta berbagai fitur Java, seperti class, object, encapsulation, exception handling, collection, dan file I/O.
+### 3. Ketentuan Kelulusan
 
-Data mahasiswa yang dimasukkan meliputi nama, NIM, dan nilai. Program kemudian menentukan grade, status kelulusan, serta menghitung rata-rata nilai seluruh mahasiswa. Hasil pengolahan data juga disimpan ke dalam file teks bernama `laporan_nilai.txt`.
+| Nilai | Keterangan |
+|---|---|
+| 70 ke atas | Lulus |
+| Di bawah 70 | Tidak Lulus |
 
-## 2. Tujuan Program
+### 4. Komponen Java yang Digunakan
 
-- Mengelola data nilai mahasiswa melalui input konsol.
-- Melakukan validasi terhadap NIM dan nilai mahasiswa.
-- Menentukan grade berdasarkan nilai yang diperoleh.
-- Menentukan status kelulusan mahasiswa.
-- Menghitung jumlah mahasiswa dan rata-rata nilai.
-- Menyimpan hasil pengolahan data ke dalam file teks.
-- Menerapkan konsep OOP dan fitur-fitur pemrograman Java.
+| Komponen | Kegunaan |
+|---|---|
+| Scanner | Membaca input dari keyboard. |
+| FileWriter | Menulis data ke file. |
+| BufferedWriter | Membantu proses penulisan file. |
+| FileReader | Membaca isi file. |
+| BufferedReader | Membaca file baris demi baris. |
+| readLine() | Membaca setiap baris sampai data habis. |
+| try-catch | Menangani kesalahan program. |
+| IOException | Menangani kesalahan saat membaca atau menulis file. |
 
-## 3. Struktur Program
+### 5. File Output
+Program menghasilkan file laporan_nilai.txt yang berisi:
+- Nama siswa.
+- Nilai siswa.
+- Status kelulusan.
+- Rata-rata nilai kelas.
+- Jumlah siswa yang lulus.
+- Jumlah siswa yang tidak lulus.
 
-Program terdiri dari dua package, yaitu `app` dan `model`, dengan susunan sebagai berikut:
+### 6. Pembacaan File
+Setelah proses penulisan selesai, program membuka kembali file laporan_nilai.txt menggunakan FileReader dan BufferedReader.
 
-- **app**
-  - `Main.java` : Class utama yang menangani input data, validasi NIM, pengolahan data, penampilan hasil, perhitungan rata-rata, dan penyimpanan laporan.
+Isi file dibaca baris demi baris menggunakan readLine() sampai tidak ada data lagi, kemudian ditampilkan ke console.
 
-- **model**
-  - `Mahasiswa.java` : Class yang menyimpan atribut nama, NIM, dan nilai mahasiswa serta menyediakan method untuk menentukan grade dan status kelulusan.
-  - `NilaiInvalidException.java` : Class exception khusus untuk menangani nilai mahasiswa yang berada di luar rentang 0 sampai 100.
+### 7. Penanganan Kesalahan
+Program menggunakan try-catch untuk menangani kesalahan saat membaca dan menulis file. Penggunaan try-with-resources dapat membantu menutup file secara otomatis setelah proses selesai.
 
-- `pom.xml` : File konfigurasi project Maven.
-- `README.md` : Dokumentasi program.
-- `laporan_nilai.txt` : File laporan yang dihasilkan setelah program dijalankan.
-
-## 4. Penjelasan Class dan Fungsinya
-
-### a. Class Mahasiswa
-
-Class `Mahasiswa` digunakan untuk merepresentasikan data setiap mahasiswa. Class ini memiliki tiga atribut, yaitu nama, NIM, dan nilai yang bersifat private.
-
-Class ini juga memiliki constructor untuk menginisialisasi data, getter untuk mengakses atribut, serta method `getGrade()` untuk menentukan nilai huruf dan `isLulus()` untuk menentukan status kelulusan.
-
-Konstanta `FINAL_PASSING_GRADE` digunakan sebagai batas nilai kelulusan, yaitu 70.
-
-### b. Class NilaiInvalidException
-
-Class `NilaiInvalidException` merupakan exception khusus yang dibuat dengan mewarisi class `Exception`. Class ini digunakan untuk memberikan penanganan apabila nilai mahasiswa kurang dari 0 atau lebih dari 100.
-
-### c. Class Main
-
-Class `Main` merupakan class utama yang menjalankan seluruh proses program. Class ini menggunakan Scanner untuk menerima input, ArrayList untuk menampung data mahasiswa, serta BufferedWriter dan FileWriter untuk menyimpan laporan ke dalam file teks.
+### 8. Kesimpulan
+Program ini menerapkan dasar pemrograman Java procedural/fungsional untuk mengelola data nilai siswa. Program dapat menerima input, menentukan kelulusan, menghitung rata-rata, menyimpan data ke file, serta membaca kembali isi file untuk ditampilkan ke console.
