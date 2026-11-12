@@ -1,3 +1,0 @@
-LAPORAN NILAI MAHASISWA
-KAKA | 029 | 90.0 | A | Lulus
-KEKE | 021 | 55.0 | D | Tidak Lulus
